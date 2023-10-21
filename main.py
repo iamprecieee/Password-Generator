@@ -7,24 +7,24 @@ symbol_key = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
 #get user input
 print("Welcome to my Password Generator, Anon!\n")
-letters = int(input("How many letters should your password have?\n")) 
+letters = int(input("How many letters should your password have?\n"))
 numbers = int(input("How many numbers should your password have?\n"))
 symbols = int(input("How many symbols should your password have?\n"))
 
 #create a list for the password's characters
 password_key = []
 #loop through the keys and randomly select characters based on the user's preference for the length of each character type
-for x in range(letters):
+for _ in range(letters):
   password_key += random.choice(letter_key)
 
-for x in range(symbols):
+for _ in range(symbols):
   password_key += random.choice(symbol_key)
 
-for x in range(numbers):
+for _ in range(numbers):
   password_key += random.choice(number_key)
 
 #shuffle the list's items
-for x in range(letters + symbols + numbers):
+for _ in range(letters + symbols + numbers):
   random.shuffle(password_key)
 
 #convert the list to a string and generate an output 
